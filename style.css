@@ -1,0 +1,163 @@
+/* fix colors on background and media query */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    background-color: rgb(187, 235, 218);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+header {
+    text-align: center;
+    margin: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+h1 img {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.list-items {
+   
+    width: 650px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-family: 'Architects Daughter', cursive;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.list-items input {
+    width: 500px;
+    font-size: 1.3rem;
+    border: none;
+    margin: 5px;
+    border-bottom: 1px solid black; 
+    font-family: 'Architects Daughter', cursive;
+}
+
+.list-items input:focus {
+    outline: none;
+}
+
+.seedling {
+    margin: 5px;
+}
+
+.flowers {
+    display: flex;
+}
+
+
+.flower {
+    margin: 50px;
+    opacity: 0;
+    transform: translateY(200px);
+    transition: 1s ease-in;
+}
+
+#flower-one {
+    width: 50px;
+}
+
+#flower-two {
+    width: 100px;
+}
+
+#flower-three {
+    width: 150px;
+}
+
+.flower-active {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.footer {
+    position: fixed;
+    bottom: 2px;
+    right: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: .5rem;
+}
+
+/* add media query for 700 ish pixels */
+
+@media only screen and (max-width: 700px) {
+    
+    h1 {
+        font-size: 1.7rem;
+    }
+    h2 {
+        font-size: .9rem;
+    }
+
+    header img {
+        display: none;
+    }
+
+    .list-items {
+        width: 310px;
+        font-size: 1rem;
+    }
+
+    .list-items input {
+        width: 300px;
+        font-size: 1rem;
+    }
+
+    .footer {
+        font-size: .2rem;
+    }
+
+    .flowers {
+        display: flex;
+        justify-content: center;
+    }
+
+    .flower {
+        margin: 10px;
+    }
+
+
+    #flower-one {
+        width: 30px;
+    }
+
+    #flower-two {
+        width: 60px;
+    }
+
+    #flower-three {
+        width: 100px;
+    }
+}
